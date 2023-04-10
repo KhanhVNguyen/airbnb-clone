@@ -12,6 +12,13 @@ const UserMenu = () => {
     const toggleOpen = useCallback(() => {
         setIsOpen((value) => !value)
     }, [])
+
+
+    const onClickSignUp = () => {
+        toggleOpen();
+        registerModal.onOpen();
+    }
+
     return (
         <div className="relative">
             <div className="flex items-center gap-3">
@@ -29,11 +36,10 @@ const UserMenu = () => {
                 <div className="absolute rounded-xl shadow-md w-[40vw] md:w-3/4 bg-white overflow-hidden right-0 top-12 text-sm">
                     <div className="flex flex-col cursor-pointer">
                         <MenuItem onClick={toggleOpen} label="Login" />
-                        <MenuItem onClick={registerModal.onOpen} label="Sign up" />
+                        <MenuItem onClick={onClickSignUp} label="Sign up" />
                         <MenuItem onClick={toggleOpen} label="Airbnb your home" />
                         <MenuItem onClick={toggleOpen} label="Host an experience" />
                         <MenuItem onClick={toggleOpen} label="Help" />
-
                     </div>
                 </div>
             )}

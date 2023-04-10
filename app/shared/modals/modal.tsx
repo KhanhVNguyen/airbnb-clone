@@ -83,6 +83,7 @@ const Modal: React.FC<IModalProps> = ({
                                         onClick={handleSecondaryAction} />
                                 )}
                             </div>
+                            {footer}
                         </div>
                     </div>
 
